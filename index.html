@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三個AI淘金機會</title>
+<meta name="description" content="Cluely創辦人Roy Lee在Jack Neel Podcast上，講的AI變現操作手冊，附信任度但書">
+<meta property="og:title" content="三個AI淘金機會">
+<meta property="og:description" content="Cluely創辦人Roy Lee講的AI變現操作手冊，附信任度但書">
+<meta property="og:image" content="images/cover.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --bg: #f9f7f4;
+    --text: #1a1a1a;
+    --text-soft: #4a4a4a;
+    --accent: #b8622f;
+    --accent-warm: #2a5d8f;
+    --accent-alert: #a13a2b;
+    --card-bg: #ffffff;
+    --border: #e4ddd2;
+    --link: #1f5fa8;
+    --quote-bg: #eef1ea;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    letter-spacing:0;
+    line-height:1.68;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  figure.summary-figure{margin:32px 0 8px;padding:0 24px;}
+  figure.summary-figure img{
+    width:100%;max-width:760px;display:block;margin:0 auto;
+    border-radius:12px;aspect-ratio:16/9;object-fit:cover;
+    box-shadow:0 6px 24px rgba(0,0,0,0.08);cursor:zoom-in;
+  }
+  .summary-caption{text-align:center;font-size:13px;color:#8a8378;margin-top:10px;}
+
+  .section-nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(249,247,244,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    height:58px;
+  }
+  .section-nav-inner{
+    max-width:760px;margin:0 auto;height:58px;
+    display:flex;align-items:center;gap:14px;
+    overflow-x:auto;padding:0 20px;
+    scrollbar-width:none;
+  }
+  .section-nav-inner::-webkit-scrollbar{display:none;}
+  .section-nav-inner a{
+    flex:0 0 auto;
+    font-size:13.5px;color:var(--text-soft);
+    text-decoration:none;white-space:nowrap;
+    padding:6px 2px;border-bottom:2px solid transparent;
+  }
+  .section-nav-inner a:hover, .section-nav-inner a:focus-visible{color:var(--accent);border-bottom-color:var(--accent);}
+
+  .hero{max-width:760px;margin:0 auto;padding:44px 20px 8px;}
+  .hero .kicker{
+    font-size:1.05rem;font-weight:800;letter-spacing:0.08em;
+    color:var(--accent);margin:0 0 22px;text-transform:uppercase;
+  }
+  h1.hero-title{
+    font-size:clamp(1.5rem, 2.4vw, 2.0rem);
+    line-height:1.42;
+    margin:0 0 12px;
+    font-weight:900;
+    text-wrap:balance;
+    color:var(--text);
+  }
+  .hero-subtitle{
+    font-size:15.5px;color:var(--text-soft);margin:0 0 22px;line-height:1.6;
+  }
+  blockquote.summary{
+    background:var(--quote-bg);
+    border-left:4px solid var(--accent-warm);
+    margin:0 0 20px;
+    padding:18px 22px;
+    border-radius:4px;
+    font-size:15.5px;
+    color:var(--text-soft);
+    line-height:1.7;
+  }
+  blockquote.summary strong{color:var(--text);}
+  blockquote.summary p{margin:0 0 12px;}
+  blockquote.summary p:last-child{margin-bottom:0;}
+  .meta-line{font-size:13.5px;color:#8a8378;margin:0 0 8px;}
+  .meta-line a{color:#8a8378;}
+
+  article{max-width:720px;margin:0 auto;padding:20px 20px 20px;}
+  h2{
+    font-size:clamp(1.32rem, 2.2vw, 1.62rem);
+    font-weight:800;
+    margin:52px 0 20px;
+    line-height:1.4;
+    text-wrap:balance;
+    border-left:5px solid var(--accent);
+    padding-left:14px;
+    margin-left:-19px;
+    color:var(--text);
+  }
+  article > h2:first-of-type{margin-top:8px;}
+  p{margin:0 0 20px;color:var(--text);font-size:16.5px;line-height:1.7;}
+  article strong{
+    color:var(--text);font-weight:700;
+    background-image:linear-gradient(transparent 62%, rgba(184,98,47,0.18) 62%);
+    padding:0 1px;
+  }
+  hr{border:none;border-top:1px solid var(--border);margin:44px 0;}
+  a{color:var(--link);}
+
+  .footer-note{
+    max-width:720px;margin:0 auto;padding:0 20px 60px;
+    font-size:13.5px;color:#8a8378;line-height:1.7;
+  }
+  .footer-note h2{border:none;padding-left:0;margin-left:0;font-size:1.05rem;color:var(--text-soft);}
+  .footer-note ul{padding-left:20px;margin:10px 0 0;}
+  .footer-note li{margin-bottom:6px;}
+
+  .caveat-box{
+    background:#fdf3ea;
+    border:1px solid #f0d9c2;
+    border-left:5px solid var(--accent-alert);
+    border-radius:10px;
+    padding:22px 24px 18px;
+    margin:24px 0 32px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.04);
+  }
+  .caveat-box p{margin:0 0 12px;}
+  .caveat-box p:last-child{margin-bottom:0;}
+  .caveat-box .caveat-label{
+    font-size:12.5px;font-weight:800;letter-spacing:0.06em;
+    color:var(--accent-alert);text-transform:uppercase;margin-bottom:10px;display:block;
+  }
+
+  .takeaway-box{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-left:5px solid var(--accent-warm);
+    border-radius:10px;
+    padding:22px 24px 18px;
+    margin:24px 0 8px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.04);
+  }
+  .takeaway-box p{margin:0;}
+
+  figure.section-figure{
+    margin:28px 0 22px;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:14px 14px 12px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.04);
+  }
+  figure.section-figure img{
+    width:100%;display:block;border-radius:8px;aspect-ratio:16/9;object-fit:cover;cursor:zoom-in;
+  }
+  figure.section-figure figcaption{
+    font-size:13px;color:#8a8378;line-height:1.55;
+    margin-top:10px;padding:0 4px;text-align:center;
+  }
+
+  .data-card{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px 24px 18px;
+    margin:24px 0 32px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.04);
+  }
+  .data-card-title{
+    font-size:14px;font-weight:800;color:var(--text-soft);
+    margin:0 0 16px;letter-spacing:0.02em;
+  }
+  .stat-grid{display:flex;gap:14px;flex-wrap:wrap;}
+  .stat-cell{
+    flex:1 1 140px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px 14px;
+    text-align:center;
+  }
+  .stat-cell .stat-number{
+    font-size:clamp(1.5rem,4vw,1.9rem);
+    font-weight:900;color:var(--accent);
+    line-height:1.2;display:block;
+  }
+  .stat-cell .stat-label{font-size:12.5px;color:var(--text-soft);margin-top:6px;display:block;}
+
+  .step-list{counter-reset:step;list-style:none;margin:0 0 28px;padding:0;}
+  .step-list li{
+    counter-increment:step;
+    position:relative;
+    padding:0 0 0 44px;
+    margin:0 0 18px;
+    font-size:16px;color:var(--text);line-height:1.65;
+  }
+  .step-list li::before{
+    content:counter(step);
+    position:absolute;left:0;top:-2px;
+    width:30px;height:30px;border-radius:50%;
+    background:var(--accent-warm);color:#fff;
+    font-weight:800;font-size:14px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .lightbox{
+    display:none;position:fixed;inset:0;z-index:200;
+    background:rgba(26,26,26,0.88);
+    align-items:center;justify-content:center;padding:24px;
+    cursor:zoom-out;
+  }
+  .lightbox.is-open{display:flex;}
+  .lightbox img{max-width:96vw;max-height:92vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,0.4);}
+  .lightbox .lightbox-hint{position:absolute;top:20px;right:24px;color:rgba(255,255,255,0.75);font-size:14px;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+
+  @media (max-width:640px){
+    article{padding:32px 18px 10px;}
+    .hero{padding:32px 18px 8px;}
+    h2{margin-left:0;border-left:none;padding-left:0;}
+    h2::before{content:"";display:block;width:34px;height:4px;background:var(--accent);border-radius:2px;margin-bottom:12px;}
+  }
+</style>
+</head>
+<body>
+
+<figure class="summary-figure">
+  <img src="images/cover.png" alt="扁平風格插畫：一支手機發著光顯示抽象的影片廣告介面，向背景多個小型建築物圖示放射出觸及箭頭，象徵一支AI廣告觸及許多公司" loading="eager">
+  <figcaption class="summary-caption">象徵圖：一支AI廣告，能同時觸及一百家公司（點圖放大）</figcaption>
+</figure>
+
+<nav class="section-nav" aria-label="文章章節導覽">
+  <div class="section-nav-inner">
+    <a href="#sec-intro">五步驟百萬美元</a>
+    <a href="#sec-who">這個人是誰</a>
+    <a href="#sec-goldrush">三個淘金機會</a>
+    <a href="#sec-playbook">具體步驟</a>
+    <a href="#sec-team">兩工程師七產品</a>
+    <a href="#sec-truth">為什麼不會人人有效</a>
+    <a href="#sec-takeaway">帶走的事</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="kicker">AI MONETIZATION</div>
+  <h1 class="hero-title">三個AI淘金機會，和一個「兩個工程師顧七個產品」的公司</h1>
+  <p class="hero-subtitle">Cluely創辦人Roy Lee在Jack Neel Podcast上，講的AI變現操作手冊</p>
+  <blockquote class="summary">
+    <p><strong>摘要：</strong>Cluely共同創辦人Roy Lee在Jack Neel Podcast上，提出一套具體到近乎機械化的「六個月內用AI影片賺到一百萬美元」操作步驟，也描述了自己公司只用兩名全職工程師維護七個年營收破百萬美元的產品。這篇導讀整理他講的三個AI淘金機會與具體打法，同時附上一個必要的信任度但書：Roy Lee本人在2026年3月公開承認曾造假營收數字，這件事會直接影響你該怎麼看待他自述的其他數字。</p>
+  </blockquote>
+  <p class="meta-line">來源：$120M CEO: You Can Make $1M in a Week! The 3 Hidden AI Gold Rushes — Roy Lee x Jack Neel Podcast　|　整理日期：2026年9月1日</p>
+</div>
+
+<article>
+
+<h2 id="sec-intro">五個步驟，六個月，一百萬美元</h2>
+<p>如果你現在想靠AI影片賺到人生第一個一百萬美元，Roy Lee給的答案短到只要五步：找一套AI影片生成工具、找一百家剛拿到創投資金的軟體公司、免費幫每一家做一支廣告、每天寄信告訴對方「這支廣告免費送你，有效再談合作」、重複十六次。他甚至在節目上算給主持人聽：一家願意留下來按月付費一萬美元，十六家就是一年一百九十二萬美元，六個月要達標，把家數再往上加就好。</p>
+<p>聽起來像是那種你划手機划到一半、划過就忘的「賺錢祕訣」。但講這套話的人不是隨便一個網紅——他是Cluely的共同創辦人Roy Lee，一家兩年前才成立、目前只靠兩名全職工程師維護七個產品的公司，而這七個產品裡多數年營收超過百萬美元。這篇文章想拆的，是他這套操作邏輯到底站不站得住腳，以及站不住腳的地方在哪裡。</p>
+
+<h2 id="sec-who">在往下讀之前，你該知道這個人是誰</h2>
+<p>Roy Lee會出現在鏡頭前，起點是一場刻意設計的鬧劇。他和共同創辦人Neel Shanmugam原本在哥倫比亞大學讀書，做了一個叫Interview Coder的工具，讓使用者可以在技術面試裡「作弊」——公開展示自己用這個工具通過Amazon的技術面試後，兩人被學校停學。他們沒有低調處理，反而把整個停學事件包裝成行銷素材，工具改名Cluely，主打「幫你在任何場合作弊」，隨後拿到Abstract Ventures、Susa Ventures領投的530萬美元種子輪，再加上a16z領投的1500萬美元A輪，外界推估估值約1.2億美元——這也是這集節目標題「$120M CEO」的由來，但這個估值數字公司和a16z都沒有正式證實過。</p>
+
+<div class="caveat-box">
+  <span class="caveat-label">信任度但書</span>
+  <p>2025年6月，Roy Lee向TechCrunch公開宣稱Cluely年營收達到700萬美元，還說一週內翻了倍。2026年3月5日，他自己在X上發文正式撤回這個說法，承認真實數字只有約520萬美元，灌水了大概三成五。他自己形容這是「我唯一公開說過、明顯不誠實的事」。</p>
+  <p>所以當他在這集節目裡說「我們只有兩個工程師、七個產品、一千多個創作者」的時候，這些數字全部來自他一個人的陳述，沒有第三方資料可以交叉核對——這不代表全部都是假的，但代表你該用查核過造假紀錄的人的話來聽，而不是照單全收。</p>
+</div>
+
+<h2 id="sec-goldrush">機制解構：三個被忽略的AI淘金機會</h2>
+<p>Roy Lee把現在能靠AI賺錢的機會分成三層。最頂端是替AI實驗室本身服務——做資料、做基礎設施、做能讓晶片跑模型更有效率的東西，他說這裡的創投資金是用幾十億美元在流動，但門檻也最高，只留給最頂尖的人。中間一層是做AI應用，把app做出來、行銷出去，他認為現在做這件事的門檻低到史上最低，一個下午就能做出一支app、三天內上架，再靠AI網紅去推廣。</p>
+<p>但他真正想強調的，是最底層、也是他認為最多人漏掉的機會：去服務那些「還不知道AI有多好用」的人。他的說法是，現在全世界超過99.9%的公司都還沒把AI用在他們原本可以用的地方——不管是沒有把AI影片用在廣告上、沒有做好自己的網站，還是根本不知道有人能幫他們一個週末就把想要的軟體寫出來。他觀察到市場上已經出現專門的中介生意：有行銷公司專門去找國高中生幫忙做AI廣告影片再轉手賣給客戶；也有專門做LinkedIn代寫的服務，實際上是把AI生成的內容包裝成「真人代寫」賣出去，客戶完全不知道自己收到的東西是機器生成的。</p>
+
+<h2 id="sec-playbook">那套六個月百萬美元的具體步驟</h2>
+<p>回到開頭那套步驟，Roy Lee講得比想像中更具體：</p>
+
+<ol class="step-list">
+  <li>找一套像Kling 2.5這樣的AI影片生成工具。</li>
+  <li>找一百家最近拿到超過一千萬美元創投資金的軟體公司——這個篩選條件代表對方有錢，也有花錢做行銷的動機。</li>
+  <li>替每一家做一支你自己看了會想看下去的廣告。</li>
+  <li>每天寄信給這一百家公司：「這支廣告我免費做給你，你可以直接拿去投放。如果有效，把我變成你的固定配合對象，我每個月收你一萬美元，持續幫你做更多廣告。如果沒效，這封信就當作沒看到。」</li>
+  <li>重複這個流程，直到有人回信為止。</li>
+</ol>
+
+<div class="data-card">
+  <p class="data-card-title">十六家客戶，一年的數字（Roy Lee在節目上的算法）</p>
+  <div class="stat-grid">
+    <div class="stat-cell"><span class="stat-number">16</span><span class="stat-label">家願意按月付費的客戶</span></div>
+    <div class="stat-cell"><span class="stat-number">$10,000</span><span class="stat-label">每家每月的抽成</span></div>
+    <div class="stat-cell"><span class="stat-number">$1.92M</span><span class="stat-label">一年的總收入</span></div>
+  </div>
+</div>
+
+<p>他給年輕人的建議，重點不在工具好不好用，而在一件他認為年輕人天生就有、但自己完全沒意識到的優勢：因為花了十幾年時間在TikTok和Instagram Reels上滑手機，已經練出了「這支影片無不無聊」的直覺判斷力，而這正是做出有效AI廣告唯一需要的技能。他舉的反例是那些四五十歲、在Facebook上什麼AI生成的長篇大論都照單全收、還轉發給孫子說「這篇寫得真好」的人——這群人完全沒有經過演算法訓練出來的那種對無聊內容的免疫力，也因此做不出年輕人能做出來的東西。</p>
+
+<h2 id="sec-team">Cluely自己怎麼運作：兩個工程師，七個產品</h2>
+<p>Roy Lee說，Cluely現在的營運方式，跟他看過的所有公司都不一樣。公司裡只有兩名全職工程師，這是他認為現在多數A輪、種子輪新創的正常配置——因為寫程式碼這件事，現在一個完全沒經驗的工程師配上AI，寫出來的品質已經跟資深工程師沒有差別。在這個前提下，Cluely旗下維持了七個軟體產品同時運作，而且他說這七個裡面，幾乎每一個年營收都超過一百萬美元——換作是傳統的做法，光是其中一個產品可能就要一個二十人的團隊做三到六個月，現在一個工程師的一個下午就能做出雛形。</p>
+
+<figure class="section-figure">
+  <img src="images/two-engineers-seven-products.png" alt="極簡向量插畫：左邊兩個小人形在筆電前工作，發光的細線連向右邊排列成網格的七個抽象app圖示方塊，象徵一個小團隊營運多個軟體產品" loading="lazy">
+  <figcaption>象徵圖：兩個人，七條線，七個產品</figcaption>
+</figure>
+
+<p>第三個他認為和別人不一樣的地方，是Cluely用了一種過去五到十年幾乎不存在的角色：以廣告成效抽成的方式，長期合作超過一千名內容創作者，專門幫公司做廣告影片，廣告表現好才付錢。他認為這個數字還能再往上放大到一萬人，只要每個人做出來的廣告能賺錢，公司就沒有理由不繼續擴大合作。</p>
+
+<h2 id="sec-truth">深層真相：為什麼這套打法不會對每個人都有效</h2>
+<p>如果只看到這裡，會覺得這是一套穩賺不賠的公式。但Roy Lee自己在節目裡，親口拆穿了這個假象的一角：他認為行銷這件事，本質上是一場零和賽局，跟「把薪資系統效率化」這種所有人都能一起受益的事完全不一樣。他的邏輯是，全世界能被廣告觸及的眼球數量是固定的，如果你的廣告變得更有吸引力，並不代表消費者會因此多花十倍的錢，只代表這筆固定預算，改分給了做得比競爭對手好的那一方。換句話說，如果每一個人都學會了他這套「免費做廣告、談抽成」的打法，這套打法本身的報酬率就會被拉低——它能成立，正是因為現在願意動手做的人還不夠多。</p>
+<p>這也是為什麼，把「兩個工程師顧七個產品」這件事直接當成可以複製的公式並不公平。他自己說得很白：現在能寫出高品質程式碼，不代表做出來的東西就一定有人願意買單，也不代表每一個做出來的東西都能像Cluely一樣自帶話題——而Cluely真正的起點，本來就是一場刻意操作的爭議行銷事件，這件事本身就很難被複製。</p>
+
+<hr>
+
+<div class="takeaway-box">
+<h2 id="sec-takeaway" style="margin-top:0;">帶走的事</h2>
+<p>這套「六個月百萬美元」的操作手冊，拆開來看每一步都合理：找對工具、找對客戶、用免費試用降低對方的決策門檻、用抽成綁定長期合作。但它成立的前提，是願意每天重複寄十六封陌生開發信、被已讀不回上百次還繼續寄的那種執行力，而不是工具本身有什麼魔法。至於Cluely兩個工程師顧七個產品的故事，值得記住的與其說是具體數字，不如說是它指出的方向：當寫程式碼的成本被AI壓到接近於零，一間公司真正的瓶頸，會從「有沒有能力做出來」變成「做不做得出別人願意付錢的東西」——而後面這件事，AI目前還沒辦法替你想清楚。</p>
+</div>
+
+<div class="footer-note" style="max-width:none;padding:0;">
+<h2 style="margin-top:52px;">關於這篇文章</h2>
+<p>本文素材來自Roy Lee與Jack Neel在Jack Neel Podcast上的完整訪談逐字稿，僅擷取與AI商業變現直接相關的內容整理改寫（三個AI淘金機會、六個月百萬美元playbook、Cluely團隊結構、行銷零和賽局論點）。逐字稿中涉及種族相關粗俗發言、以「消滅特定族群」當AI安全案例、將受訪者自己與爭議性公眾人物相提並論並歌頌、AI女友與外貌至上主義、對被AI取代者的輕浮人生建議、藥物濫用細節、誇大自戀敘事等內容，依編輯決定完全不收錄。文中「兩個工程師、七個產品、一千多名創作者」等數字均為Roy Lee本人自述，未經第三方查證，且他本人有2026年公開承認造假營收數字的紀錄，請讀者以此為判讀依據。</p>
+
+<h2 style="margin-top:36px;">延伸閱讀 / 完整來源</h2>
+<ul>
+  <li><a href="https://techcrunch.com/2025/04/21/columbia-student-suspended-over-interview-cheating-tool-raises-5-3m-to-cheat-on-everything/" target="_blank" rel="noopener">Columbia student suspended over interview cheating tool raises $5.3M to 'cheat on everything' — TechCrunch</a></li>
+  <li><a href="https://techcrunch.com/2025/06/20/cluely-a-startup-that-helps-cheat-on-everything-raises-15m-from-a16z" target="_blank" rel="noopener">Cluely, a startup that helps 'cheat on everything,' raises $15M from a16z — TechCrunch</a></li>
+  <li><a href="https://techcrunch.com/2026/03/05/cluely-ceo-roy-lee-admits-to-publicly-lying-about-revenue-numbers-last-year/" target="_blank" rel="noopener">Cluely CEO Roy Lee admits to publicly lying about revenue numbers last year — TechCrunch</a></li>
+</ul>
+</div>
+
+</article>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-hint">點擊或按 Esc 關閉</span>
+  <img src="" alt="">
+</div>
+
+<script>
+  (function(){
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = lightbox.querySelector("img");
+    var lastFocused = null;
+    function openLightbox(img){
+      lastFocused = document.activeElement;
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("tabindex","-1");
+      lightbox.focus();
+    }
+    function closeLightbox(){
+      lightbox.classList.remove("is-open");
+      lightboxImg.src = "";
+      if (lastFocused) lastFocused.focus();
+    }
+    document.querySelectorAll("figure.summary-figure img, figure.section-figure img").forEach(function(img){
+      img.setAttribute("tabindex","0");
+      img.setAttribute("role","button");
+      img.addEventListener("click", function(){ openLightbox(img); });
+      img.addEventListener("keydown", function(e){
+        if (e.key === "Enter" || e.key === " "){ e.preventDefault(); openLightbox(img); }
+      });
+    });
+    lightbox.addEventListener("click", closeLightbox);
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox(); });
+  })();
+</script>
+
+</body>
+</html>
